@@ -1,16 +1,16 @@
 fetch('/people.json')
     .then((res) => res.json())
-    .then((response) => console.log(response))
+    // .then((response) => console.log(response))
 
-fetch('https://ergast.com/api/f1/2020/1/driverStandings.json')
-    .then((res) => res.json())
-    .then((responseData) => displayRow(responseData))
+// fetch('https://ergast.com/api/f1/2020/1/driverStandings.json')
+//     .then((res) => res.json())
+//     .then((responseData) => displayRow(responseData))
 
 function displayRow(data) {
-    console.log(data)
+    // console.log(data)
 
     for (let row of data.MRData.StandingsTable.StandingsLists[0].DriverStandings) {
-        console.log(row)
+        // console.log(row)
     }
     }
 
@@ -32,3 +32,29 @@ function clearBody() {
     document.body.innerHTML = ''
     // document.body.innerHTML = '<div id="div2"></div>'
 }
+
+const myForm = document.getElementById('form')
+
+myForm.addEventListener('submit', (event) => {
+    event.preventDefault()
+    const myForm = document.getElementById('form')
+    formData = new FormData(myForm)
+    console.log(formData)
+    console.log(event.target)
+    console.log('submitted')
+    for (const [key, value] of formData) {
+        console.log(key)
+        console.log(value)
+    }
+    fetch('https://ergast.com/api/f1/2020/1/driverStandings.json')
+        .then((res) => res.json())
+        .then((responseData) => displayRow(responseData))
+});
+
+// onsubmit = (event) => {
+//     event.preventDefault()
+//     formData = new FormData(myForm)
+//     console.log('submission triggered')
+//     console.log(myForm)
+//     console.log(formData)
+// };
