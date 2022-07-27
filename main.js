@@ -22,8 +22,13 @@ function addElement () {
     document.body.insertBefore(newDiv, currentDiv);
 }
 
-function clearBody() {
+function removeElement() {
     let myElement = document.getElementsByTagName('div')
     console.log(myElement[0])
     myElement[0].remove()
+}
+
+function clearBody() {
+    document.body.innerHTML = ''
+    // document.body.innerHTML = '<div id="div2"></div>'
 }
