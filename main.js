@@ -11,6 +11,11 @@ function displayRow(data) {
 
     for (let row of data.MRData.StandingsTable.StandingsLists[0].DriverStandings) {
         console.log(row)
+        console.log(row.position)
+        console.log(row.Driver.givenName + ' ' + row.Driver.familyName)
+        console.log(row.Driver.url)
+        console.log(row.Driver.nationality)
+        console.log(row.wins)
     }
     }
 
