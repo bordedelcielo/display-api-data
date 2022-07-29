@@ -11,10 +11,13 @@ function apiCall(year, month) {
 }
 
 function createTable(data) {
+    let tableDiv = document.getElementById('div1')
+    tableDiv.innerHTML = ''
+
     const newTable = document.createElement('table')
     newTable.setAttribute('id', 'resultsTable')
-    document.body.insertBefore(newTable, document.getElementById('div1'))
-
+    tableDiv.append(newTable)
+    // document.body.insertBefore(newTable, document.getElementById('div1'))
 
     for (let row of data.MRData.StandingsTable.StandingsLists[0].DriverStandings) {
         newRow = document.createElement('tr')
