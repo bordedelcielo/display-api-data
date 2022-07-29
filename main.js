@@ -6,8 +6,8 @@
 
 function apiCall(year, month) {
     fetch(`https://ergast.com/api/f1/${year}/${month}/driverStandings.json`)
-    .then((res) => res.json())
-    .then((responseData) => createTable(responseData))
+        .then((res) => res.json())
+        .then((responseData) => createTable(responseData))
 }
 
 function createTable(data) {
