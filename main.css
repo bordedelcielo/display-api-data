@@ -1,4 +1,25 @@
+body {
+    background-image: url(https://images.pexels.com/photos/39855/lamborghini-brno-racing-car-automobiles-39855.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+#formDiv {
+    margin: 50px auto;
+    background-color: rgba(150,150,150,0.4);
+}
+
+#resultsTable {
+    margin: 0 auto;
+    background-color: rgba(150, 50, 50, 0.4)
+}
+
 td {
-    background-color: salmon;
-    color: white;
+    border-style: solid;
+    border-color: rgb(247, 240, 240, 0.8)
 }

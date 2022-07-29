@@ -11,34 +11,36 @@
 
 <body>
 
-    <form action="/action" id="form" method="post">
-        <label for="">Year</label>
-        <input type="text" id="yearId" name="yearName">
-        <label for="">Month</label>
-        <input type="text" value="" id="monthId" name="monthName">
-        <button type="submit">Submit</button>
-    </form>
+    <div id="formDiv">
 
-    <table id="resultsTable">
-        <thead>
+        <form action="/action" id="form" method="post">
+            <label for="">Year</label>
+            <input type="text" id="yearId" name="yearName">
+            <label for="">Month</label>
+            <input type="text" value="" id="monthId" name="monthName">
+            <button type="submit">Submit</button>
+        </form>
+
+        <table id="resultsTable">
+            <thead>
+                <tr>
+                    <td>Position</td>
+                    <td>Full Name</td>
+                    <td>Nationality</td>
+                </tr>
+            </thead>
+            <tbody id="tableBody"></tbody>
+        </table>
+
+        <template id='myTemplate'>
             <tr>
-                <td>Position</td>
-                <td>Full Name</td>
-                <td>Nationality</td>
+                <td></td>
+                <td></td>
+                <td></td>
             </tr>
-        </thead>
-        <tbody id="tableBody"></tbody>
-    </table>
+        </template>
 
-    <template id ='myTemplate'>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-    </template>
-
-    <div id="div1"></div>
+    </div>
 
     <script src="main.js"></script>
 </body>
