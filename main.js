@@ -15,7 +15,7 @@ function createTable(data) {
         let clone = myTemplate.content.cloneNode(true);
         let td = clone.querySelectorAll('td');
         td[0].textContent = position
-        td[1].textContent = fullName
+        td[1].innerHTML = `<a href='${url}' target='_blank'><p>${fullName}</p></a>`
         td[2].textContent = nation
 
         tableBody.appendChild(clone);
