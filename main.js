@@ -26,7 +26,7 @@ function createTable(data) {
 
         tableBody.appendChild(clone);
     }
-    }
+}
 
 const myForm = document.getElementById('form')
 
