@@ -8,7 +8,6 @@ function createTable(data) {
 
     results = data.MRData.StandingsTable.StandingsLists[0].DriverStandings
 
-    // for (let row of data.MRData.StandingsTable.StandingsLists[0].DriverStandings) {
         for (let i = 0; i < 10; i++) {
         let position = results[i].position
         let fullName = results[i].Driver.givenName + ' ' + results[i].Driver.familyName
