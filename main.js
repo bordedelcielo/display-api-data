@@ -6,11 +6,14 @@ function apiCall(year, month) {
 
 function createTable(data) {
 
-    for (let row of data.MRData.StandingsTable.StandingsLists[0].DriverStandings) {
-        let position = row.position
-        let fullName = row.Driver.givenName + ' ' + row.Driver.familyName
-        let url = row.Driver.url
-        let nation = row.Driver.nationality
+    results = data.MRData.StandingsTable.StandingsLists[0].DriverStandings
+
+    // for (let row of data.MRData.StandingsTable.StandingsLists[0].DriverStandings) {
+        for (let i = 0; i < 10; i++) {
+        let position = results[i].position
+        let fullName = results[i].Driver.givenName + ' ' + results[i].Driver.familyName
+        let url = results[i].Driver.url
+        let nation = results[i].Driver.nationality
 
         let clone = myTemplate.content.cloneNode(true);
         let td = clone.querySelectorAll('td');
