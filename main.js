@@ -1,9 +1,3 @@
-/*
-1) Data is submitted to a form
-2) Data is used to make an API call
-3) The first ten rows of information from the API call are read and converted to HTML tables.
-*/
-
 function apiCall(year, month) {
     fetch(`https://ergast.com/api/f1/${year}/${month}/driverStandings.json`)
         .then((res) => res.json())
