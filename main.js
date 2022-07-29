@@ -1,21 +1,37 @@
-fetch('/people.json')
+/*
+1) Data is submitted to a form
+2) Data is used to make an API call
+3) The first ten rows of information from the API call are read and converted to HTML tables.
+*/
+
+function apiCall(year, month) {
+    fetch(`https://ergast.com/api/f1/${year}/${month}/driverStandings.json`)
     .then((res) => res.json())
-    // .then((response) => console.log(response))
+    .then((responseData) => createTable(responseData))
+}
 
-// fetch('https://ergast.com/api/f1/2020/1/driverStandings.json')
-//     .then((res) => res.json())
-//     .then((responseData) => displayRow(responseData))
+function createTable(data) {
+    const newTable = document.createElement('table')
+    newTable.setAttribute('id', 'resultsTable')
+    document.body.insertBefore(newTable, document.getElementById('div1'))
 
-function displayRow(data) {
-    // console.log(data)
 
     for (let row of data.MRData.StandingsTable.StandingsLists[0].DriverStandings) {
-        console.log(row)
-        console.log(row.position)
-        console.log(row.Driver.givenName + ' ' + row.Driver.familyName)
-        console.log(row.Driver.url)
-        console.log(row.Driver.nationality)
-        console.log(row.wins)
+        newRow = document.createElement('tr')
+        let position = row.position
+        let fullName = row.Driver.givenName + ' ' + row.Driver.familyName
+        let url = row.Driver.url
+        let nation = row.Driver.nationality
+        let theArr = [position, fullName, nation]
+
+        for (let item of theArr) {
+            newField = document.createElement('td')
+            newRowContent = document.createTextNode(item)
+            newField.append(newRowContent)
+            newRow.append(newField)
+        }
+
+        newTable.append(newRow)
     }
     }
 
@@ -53,11 +69,7 @@ myForm.addEventListener('submit', (event) => {
         console.log(value)
         myList.push(value)
     }
-    let year = myList[0]
-    let month = myList[1]
-    fetch(`https://ergast.com/api/f1/${year}/${month}/driverStandings.json`)
-        .then((res) => res.json())
-        .then((responseData) => displayRow(responseData))
+    apiCall(myList[0], myList[1])
 });
 
 // onsubmit = (event) => {
