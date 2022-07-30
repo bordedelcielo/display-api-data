@@ -21,5 +21,10 @@ body {
 
 td {
     border-style: solid;
-    border-color: rgb(247, 240, 240, 0.8)
+    border-color: rgb(247, 240, 240, 0.8);
+    color: white;
+}
+
+a {
+    color: white;
 }
