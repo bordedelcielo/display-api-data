@@ -13,15 +13,19 @@
 
     <div id="formDiv">
 
-        <form action="/action" id="form" method="post">
-            <label for="">Season</label>
-            <input type="text" id="yearId" name="yearName">
-            <label for="">Round</label>
-            <input type="text" value="" id="monthId" name="monthName">
-            <button type="submit">Submit</button>
-        </form>
-
         <p>Please enter a season and a round</p>
+
+        <form action="/action" id="form" method="post">
+            <div class="entryPoints">
+                <label for="">Season</label>
+                <input type="text" id="yearId" name="yearName">
+                <label for="">Round</label>
+                <input type="text" value="" id="monthId" name="monthName">
+            </div>
+            <div class="buttonDiv">
+                <button type="submit">Get Results</button>
+            </div>
+        </form>
 
         <table id="resultsTable">
             <thead>

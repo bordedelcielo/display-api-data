@@ -30,6 +30,7 @@ const myForm = document.getElementById('form')
 
 myForm.addEventListener('submit', (event) => {
     event.preventDefault()
+    tableBody.innerHTML = ''
     const myForm = document.getElementById('form')
     formData = new FormData(myForm)
     // console.log(event.target)
