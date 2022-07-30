@@ -6,6 +6,8 @@ function apiCall(year, month) {
 
 function createTable(data) {
 
+    tableBody.innerHTML = ''
+    // console.log(data)
     results = data.MRData.StandingsTable.StandingsLists[0].DriverStandings
 
         for (let i = 0; i < 10; i++) {
@@ -28,10 +30,9 @@ const myForm = document.getElementById('form')
 
 myForm.addEventListener('submit', (event) => {
     event.preventDefault()
-    tableBody.innerHTML = ''
     const myForm = document.getElementById('form')
     formData = new FormData(myForm)
-    console.log(event.target)
+    // console.log(event.target)
     let myList = []
     for (const [key, value] of formData) {
         myList.push(value)
