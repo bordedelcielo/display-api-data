@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box; /* HTML defaults to content-box. Border box is better. */
+}
+
 body {
     background-image: url(https://images.pexels.com/photos/39855/lamborghini-brno-racing-car-automobiles-39855.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
     background-size: cover;
@@ -17,6 +21,19 @@ body {
     align-items: center;
     color: white;
     border-radius: 25px;
+}
+
+label {
+    display: inline-block;
+    width: 46px;
+}
+
+input {
+    display: inline-block;
+    width: calc(100% - 53px);
+    background-color: rgba(150, 50, 50, 0.0);
+    border-color: white;
+    border-radius: 10px;
 }
 
 .buttonDiv {
