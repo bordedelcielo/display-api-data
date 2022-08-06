@@ -50,6 +50,7 @@ button {
     border-color: white;
     background-color:rgba(150, 50, 50, 0);
     color: white;
+    margin: 10px;
 }
 
 #resultsTable {
@@ -61,6 +62,10 @@ button {
     background-color: rgba(150, 50, 50, 0.4);
     margin-left: 10px;
     margin-right: 10px;
+}
+
+input {
+    margin: 10px;
 }
 
 td {
