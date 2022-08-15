@@ -19,7 +19,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: white;
+    color: rgb(155, 26, 26);
     border-radius: 25px;
 }
 
