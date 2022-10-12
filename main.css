@@ -13,6 +13,10 @@ body {
     justify-content: center;
 }
 
+/* ::placeholder {
+    color: white;
+} */
+
 #yearId {
     color: white;
 }
