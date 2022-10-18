@@ -4,6 +4,8 @@ function apiCall(year, month) {
         .then((responseData) => createTable(responseData))
 }
 
+apiCall(2020,1)
+
 function createTable(data) {
 
     tableBody.innerHTML = ''
