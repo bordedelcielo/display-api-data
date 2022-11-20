@@ -1,4 +1,4 @@
-Project to call data from the Ergast F1 Racer API (www.ergast.com) and display it on a webpage. This theme is car racers and it is hosted <a href="https://astounding-marigold-7ec659.netlify.app/">here</a>. 
+Project to call data from the <a href="https://ergast.com/mrd/">Ergast F1 Racer API</a> and display it on a webpage. This theme is car racers and it is hosted <a href="https://astounding-marigold-7ec659.netlify.app/">here</a>. 
 
 Note: occasionally, the Ergast API to which API calls are made experiences downtime.
 
